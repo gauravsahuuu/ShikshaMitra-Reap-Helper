@@ -1,0 +1,436 @@
+Institute,Branch,category,gen,mews,fews,mobc,fobc,msc,fsc,mst,fst
+"Engineering College, Ajmer",CIVIL ENGINEERING(SFS),SFS,5299,1552,-1,1646,-1,348,-1,135,40
+"Engineering College, Ajmer",COMPUTER ENGINEERING(SFS),SFS,1188,266,117,315,118,254,119,142,-1
+"Engineering College, Ajmer",ELECTRICAL ENGINEERING(SFS),SFS,6059,1306,-1,1526,-1,456,-1,205,-1
+"Engineering College, Ajmer",ELECTRO. INST. & CONTROL(SFS),SFS,10096,1638,-1,2899,-1,-1,-1,-1,0
+"Engineering College, Ajmer",ELECTRONICS & COMM.(SFS),SFS,8775,1433,-1,2478,-1,921,-1,-1,-1
+"Engineering College, Ajmer",INFORMATION TECHNOLOGY(SFS),SFS,2989,525,209,655,-1,380,185,68,-1
+"Engineering College, Ajmer",MECHANICAL ENGINEERING(SFS),SFS,7577,1174,-1,1799,-1,505,-1,313,-1
+"Engineering College, Ajmer",ELECTRO. INST. & CONTROL(GAS),GAS,9441,1532,-1,2234,-1,766,-1,-1,-1
+"Engineering College, Ajmer",ELECTRONICS  AND  COMM.(GAS),GAS,4667,926,309,1401,327,433,-1,117,33
+"Engineering College, Ajmer",MECHANICAL(GAS),GAS,6013,1280,-1,1531,-1,462,-1,97,-1
+"M.L.V. Textile and Engineering College, Bhilwara",ELECTRONICS AND COMM.(SFS),SFS,9722,-1,-1,-1,-1,-1,-1,-1,0
+"M.L.V. Textile and Engineering College, Bhilwara",INFORMATION TECHNOLOGY(SFS),SFS,7708,1235,416,1850,506,-1,-1,-1,-1
+"M.L.V. Textile and Engineering College, Bhilwara",MECHANICAL ENGINEERING(SFS),SFS,10386,-1,-1,-1,-1,-1,-1,-1,-1
+"M.L.V. Textile and Engineering College, Bhilwara",TEXTILE CHEMISTRY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"M.L.V. Textile and Engineering College, Bhilwara",TEXTILE TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"M.L.V. Textile and Engineering College, Bhilwara",TEXTILE CHEMISTRY(GAS),GAS,10563,-1,-1,-1,-1,-1,-1,-1,0
+"M.L.V. Textile and Engineering College, Bhilwara",TEXTILE TECHNOLOGY(GAS),GAS,10380,-1,-1,-1,-1,-1,-1,-1,-1
+"M.L.V. Textile and Engineering College, Bhilwara",COMPUTER SCIENCE AND ENGINEERING-IOT(SFS),SFS,2682,706,435,840,369,193,82,-1,0
+"Engineering College, Bikaner",CIVIL ENGINEERING(SFS),SFS,10590,-1,-1,2715,-1,-1,-1,366,-1
+"Engineering College, Bikaner",ELECTRICAL ENGINEERING(SFS),SFS,10332,1478,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Bikaner",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Bikaner",INFORMATION TECHNOLOGY(SFS),SFS,6549,1113,344,1745,-1,-1,-1,-1,0
+"Engineering College, Bikaner",MECHANICAL ENGINEERING(SFS),SFS,10007,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Bikaner",ELECTRICAL (II SHIFT)(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Engineering College, Bikaner",MECHANICAL (II SHIFT)(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Engineering College, Bikaner",COMPUTER SCIENCE & ENGG.(SFS),SFS,3259,580,238,1024,403,756,-1,-1,-1
+"Engineering College, Bikaner",ELECTRONIC INSTRUMENTATION & CONTROL ENGINEERING(S,SFS,9738,-1,-1,-1,-1,-1,-1,-1,0
+"Engineering College, Bikaner",ARTIFICIAL INTELLIGENCE AND DATA SCIENCE(SFS),SFS,10555,1366,-1,2455,-1,-1,-1,-1,-1
+"M.B.M. Engineering College, Jodhpur",INFORMATION TECHNOLOGY(SFS),SFS,70,10,11,30,12,38,56,40,0
+"M.B.M. Engineering College, Jodhpur",ELECTRONICS  AND  ELECTRICAL(SFS),SFS,938,186,52,239,102,134,101,37,-1
+"M.B.M. Engineering College, Jodhpur",ELECTRONICS  AND  COMPUTER(SFS),SFS,374,95,23,99,41,102,83,71,45
+"M.B.M. Engineering College, Jodhpur",CHEMICAL(GAS),GAS,1340,291,87,416,0,143,103,72,18
+"M.B.M. Engineering College, Jodhpur",CIVIL(GAS),GAS,999,315,142,316,87,46,41,10,4
+"M.B.M. Engineering College, Jodhpur",ELECTRICAL(GAS),GAS,474,110,36,150,40,37,24,16,2
+"M.B.M. Engineering College, Jodhpur",ELECTRONICS & COMM.(GAS),GAS,278,79,24,96,37,76,49,13,11
+"M.B.M. Engineering College, Jodhpur",MECHANICAL(GAS),GAS,922,191,104,251,91,88,61,32,20
+"M.B.M. Engineering College, Jodhpur",MINING(GAS),GAS,1458,331,138,360,98,196,129,91,42
+"M.B.M. Engineering College, Jodhpur",PRODUCTION & INDUSTRIAL(GAS),GAS,2726,570,220,729,136,478,-1,195,-1
+"M.B.M. Engineering College, Jodhpur",COMPUTER SCIENCE & ENGG.(GAS),GAS,26,4,2,8,1,4,3,15,10
+"M.B.M. Engineering College, Jodhpur",PETROLEUM ENGINEERING(GAS),GAS,2522,535,304,723,132,281,168,147,27
+"Rajasthan Technical University, Kota",CIVIL ENGINEERING(SFS),SFS,3928,849,300,1123,371,317,97,104,34
+"Rajasthan Technical University, Kota",ELECTRICAL ENGINEERING(SFS),SFS,2799,547,158,809,248,263,102,103,43
+"Rajasthan Technical University, Kota",ELECTRO. INST. & CONTROL(SFS),SFS,5201,941,310,1274,-1,-1,-1,-1,0
+"Rajasthan Technical University, Kota",ELECTRONICS AND COMM.(SFS),SFS,1353,284,123,470,147,296,-1,107,59
+"Rajasthan Technical University, Kota",INFORMATION TECHNOLOGY(SFS),SFS,516,123,45,216,76,222,139,84,48
+"Rajasthan Technical University, Kota",MECHANICAL ENGINEERING(SFS),SFS,3231,664,207,791,-1,277,-1,79,-1
+"Rajasthan Technical University, Kota",PETROLEUM ENGINEERING(SFS),SFS,6289,1106,413,1653,-1,882,-1,-1,0
+"Rajasthan Technical University, Kota",AERONAUTICAL ENGINEERING(SFS),SFS,1851,425,198,699,297,287,87,197,0
+"Rajasthan Technical University, Kota",PETRO CHEMICAL(SFS),SFS,7686,1193,-1,1888,-1,-1,-1,-1,0
+"Rajasthan Technical University, Kota",CIVIL(GAS),GAS,2607,651,254,645,148,121,67,31,5
+"Rajasthan Technical University, Kota",ELECTRO. INST. & CONTROL(GAS),GAS,2889,592,193,676,162,412,-1,152,-1
+"Rajasthan Technical University, Kota",PRODUCTION & INDUSTRIAL(GAS),GAS,5553,1184,369,1453,-1,1007,-1,-1,-1
+"Rajasthan Technical University, Kota",COMPUTER SCIENCE & ENGG.(SFS),SFS,291,55,21,124,44,130,50,25,28
+"College of Technology and Engineering, Udaipur",CIVIL ENGINEERING(SFS),SFS,2340,458,188,641,152,184,60,53,25
+"College of Technology and Engineering, Udaipur",ELECTRICAL ENGINEERING(SFS),SFS,2141,428,98,573,187,271,80,111,31
+"College of Technology and Engineering, Udaipur",ELECTRONICS & COMM.(SFS),SFS,1197,256,103,294,114,314,-1,137,-1
+"College of Technology and Engineering, Udaipur",MECHANICAL ENGINEERING(SFS),SFS,2187,336,139,662,253,309,65,136,-1
+"College of Technology and Engineering, Udaipur",MINING(SFS),SFS,2042,615,0,633,244,382,0,228,0
+"College of Technology and Engineering, Udaipur",MINING(GAS),GAS,1703,469,0,350,0,321,195,119,0
+"College of Technology and Engineering, Udaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,234,52,31,89,32,141,36,83,16
+"College of Technology and Engineering, Udaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,778,171,50,218,88,216,89,207,88
+"College of Technology and Engineering, Udaipur",AGRICULTURE ENGINEERING(GAS),GAS,2742,640,236,742,168,320,-1,86,26
+"Laxmi Devi Institute of Engineering and Technology, Alwar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Laxmi Devi Institute of Engineering and Technology, Alwar",ELECTRICAL ENGINEERING(SFS),SFS,10553,-1,-1,-1,-1,-1,-1,-1,-1
+"Laxmi Devi Institute of Engineering and Technology, Alwar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Laxmi Devi Institute of Engineering and Technology, Alwar",COMPUTER SCIENCE & ENGG.(SFS),SFS,10157,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering Tech. and Management, Jaipur",CIVIL ENGINEERING(SFS),SFS,10364,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering Tech. and Management, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,9537,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering Tech. and Management, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering Tech. and Management, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,9595,-1,-1,2352,-1,-1,-1,-1,-1
+"Arya Institute of Engineering Tech. and Management, Jaipur",COMPUTER SCIENCE & DESIGN(SFS),SFS,10534,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering and Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,10331,-1,-1,-1,-1,-1,-1,524,-1
+"Arya Institute of Engineering and Technology, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering and Technology, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,10430,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering and Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering and Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,9775,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya Institute of Engineering and Technology, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,10502,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engg. and Information Technology, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,10267,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engg. and Information Technology, Jaipur",ELECTRONICS AND COMM.(SFS),SFS,10483,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engg. and Information Technology, Jaipur",INFORMATION TECHNOLOGY (SFS),SFS,8977,1506,-1,2237,-1,-1,-1,364,-1
+"Arya College of Engg. and Information Technology, Jaipur",MECHANICAL ENGINEERING (SFS),SFS,9968,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engg. and Information Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,5658,1051,362,1713,-1,-1,-1,-1,-1
+"Arya College of Engg. and Information Technology, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,9506,-1,-1,2802,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10511,-1,-1,-1,-1,-1,-1,-1,-1
+"Global Institute of Technology, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jagan Nath Gupta Institute of Engineering and Tech., Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jagan Nath Gupta Institute of Engineering and Tech., Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jagan Nath Gupta Institute of Engineering and Tech., Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jagan Nath Gupta Institute of Engineering and Tech., Jaipur",COMPUTER ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College, Kukas, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College, Kukas, Jaipur",COMPUTER ENGINEERING(SFS),SFS,10466,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College, Kukas, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College, Kukas, Jaipur",ELECTRONICS  AND  COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Jaipur Engineering College, Kukas, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Jaipur Engineering College, Kukas, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College, Kukas, Jaipur",COMPUTER SCIENCE & ENGINEERING (ARTIFICIAL INTELLI,SFS,9918,1642,-1,2000,-1,989,-1,-1,0
+"Jaipur Engineering College, Kukas, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Jaipur Engineering College and Research Centre, Jaipur",CIVIL ENGINEERING (SFS),SFS,10064,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College and Research Centre, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,9660,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College and Research Centre, Jaipur",ELECTRONICS & COMM.(SFS),SFS,10533,974,316,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College and Research Centre, Jaipur",INFORMATION TECHNOLOGY (SFS),SFS,2641,431,122,887,367,-1,-1,-1,-1
+"Jaipur Engineering College and Research Centre, Jaipur",MECHANICAL ENGINEERING (SFS),SFS,9783,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Engineering College and Research Centre, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,875,199,66,533,210,415,-1,317,-1
+"Jaipur Engineering College and Research Centre, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,1543,292,77,765,258,453,-1,140,-1
+"Kautilya Institute of Technology and Engineering, Jaipur",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Kautilya Institute of Technology and Engineering, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Kautilya Institute of Technology and Engineering, Jaipur",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Kautilya Institute of Technology and Engineering, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Poornima College of Engineering, Jaipur",CIVIL ENGINEERING(SFS),SFS,10324,-1,-1,3015,-1,-1,-1,360,-1
+"Poornima College of Engineering, Jaipur",COMPUTER ENGINEERING(SFS),SFS,3394,733,203,1321,345,-1,-1,-1,-1
+"Poornima College of Engineering, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,9866,-1,-1,2156,-1,-1,-1,-1,0
+"Poornima College of Engineering, Jaipur",ELECTRONICS & COMM.(SFS),SFS,10501,-1,-1,-1,-1,-1,-1,-1,0
+"Poornima College of Engineering, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,5138,924,277,1604,376,-1,-1,-1,-1
+"Poornima College of Engineering, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,10153,-1,-1,2763,-1,-1,-1,-1,0
+"Poornima College of Engineering, Jaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,3659,718,206,1177,332,-1,-1,101,-1
+"Poornima College of Engineering, Jaipur",COMPUTER SCIENCE & ENGINEERING-CYBER SECURITY(SFS),SFS,5884,963,271,1562,-1,-1,-1,-1,-1
+"Poornima College of Engineering, Jaipur",ARTIFICIAL INTELLIGENCE AND DATA SCIENCE(SFS),SFS,6078,976,329,1925,-1,-1,-1,-1,-1
+"Poornima College of Engineering, Jaipur",COMPUTER ENGINEERING(Regional)(SFS),SFS,10505,1527,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan College of Engineering for Women, Jaipur",CIVIL ENGINEERING(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Rajasthan College of Engineering for Women, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Rajasthan College of Engineering for Women, Jaipur",ELECTRONICS & COMM.(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Rajasthan College of Engineering for Women, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,9675,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engineering and Technology, Jaipur",ELECTRICAL & ELECTRONICS(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,9645,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engineering and Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10201,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engineering and Technology, Jaipur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regional College for Education, Research and Tech., Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regional College for Education, Research and Tech., Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regional College for Education, Research and Tech., Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Regional College for Education, Research and Tech., Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Regional College for Education, Research and Tech., Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10062,-1,-1,-1,-1,-1,-1,-1,-1
+"Shankara Institute of Technology, Jaipur",AUTOMOBILE ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shankara Institute of Technology, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shankara Institute of Technology, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shankara Institute of Technology, Jaipur",INFORMATION TECHNOLOGY (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shankara Institute of Technology, Jaipur",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shankara Institute of Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sri Balaji College of Engineering and Technology, Jaipur",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sri Balaji College of Engineering and Technology, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,10448,-1,-1,-1,-1,-1,-1,-1,0
+"Sri Balaji College of Engineering and Technology, Jaipur",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sri Balaji College of Engineering and Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sri Balaji College of Engineering and Technology, Jaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Stani Memorial College of Engg. and Technology, Phagi, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Stani Memorial College of Engg. and Technology, Phagi, Jaipur",COMPUTER ENGINEERING(SFS),SFS,10199,-1,-1,-1,-1,-1,-1,525,-1
+"Stani Memorial College of Engg. and Technology, Phagi, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Stani Memorial College of Engg. and Technology, Phagi, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Stani Memorial College of Engg. and Technology, Phagi, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",CIVIL ENGINEERING(SFS),SFS,8642,1226,-1,1953,498,-1,-1,224,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,10512,-1,-1,2790,-1,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",ELECTRONICS & COMM.(SFS),SFS,5064,788,245,1982,-1,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",INFORMATION TECHNOLOGY(SFS),SFS,2331,456,125,1014,300,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,9520,-1,-1,-1,-1,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,1004,205,64,396,156,534,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,1481,276,105,556,214,-1,-1,-1,-1
+"Swami Keshvanand Inst. of Tech. Mgt. and Gramothan, Jaipur",COMPUTER SCIENCE & ENGINEERING(DATA SCIENCE)(SFS),SFS,1751,366,119,683,236,-1,-1,-1,-1
+"Yagyavalkya Institute of Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Yagyavalkya Institute of Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Yagyavalkya Institute of Technology, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Yagyavalkya Institute of Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Yagyavalkya Institute of Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bhartiya Institute of Engineering and Technology, Sikar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bhartiya Institute of Engineering and Technology, Sikar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bhartiya Institute of Engineering and Technology, Sikar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bhartiya Institute of Engineering and Technology, Sikar",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",CIVIL ENGINEERING(SFS),SFS,10278,-1,-1,-1,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",COMPUTER SCIENCE & ENGG.(SFS),SFS,9073,1547,-1,1668,-1,-1,-1,-1,-1
+"Jodhpur Institute of Engineering and Technology, Jodhpur",ROBOTICS & AUTOMATION(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Modi Institute of Technology, Kota",COMPUTER ENGINEERING (SFS),SFS,10518,1635,-1,-1,-1,-1,-1,-1,-1
+"Modi Institute of Technology, Kota",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Modi Institute of Technology, Kota",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Modi Institute of Technology, Kota",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Modi Institute of Technology, Kota",ARTIFICIAL INTELLIGENCE AND DATA SCIENCE (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Compucom Institute of Technology and Management, Jaipur",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Compucom Institute of Technology and Management, Jaipur",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Compucom Institute of Technology and Management, Jaipur",ELECTRONICS AND COMMUNICATION ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Compucom Institute of Technology and Management, Jaipur",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shrinathji Inst. of Technology and Engg. Nathdwara, Rajsamand",COMPUTER ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shrinathji Inst. of Technology and Engg. Nathdwara, Rajsamand",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shrinathji Inst. of Technology and Engg. Nathdwara, Rajsamand",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sobhasaria Group of Institutions , Sikar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sobhasaria Group of Institutions , Sikar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sobhasaria Group of Institutions , Sikar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Sobhasaria Group of Institutions , Sikar",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Geetanjali Institute of Technical Studies, Udaipur",CIVIL ENGINEERING(SFS),SFS,9961,-1,-1,-1,-1,-1,-1,505,-1
+"Geetanjali Institute of Technical Studies, Udaipur",ELECTRICAL ENGINEERING(SFS),SFS,10440,-1,-1,-1,-1,-1,-1,458,-1
+"Geetanjali Institute of Technical Studies, Udaipur",ELECTRONICS & COMM.(SFS),SFS,9937,-1,-1,-1,-1,-1,-1,-1,-1
+"Geetanjali Institute of Technical Studies, Udaipur",MECHANICAL ENGINEERING(SFS),SFS,10041,-1,-1,-1,-1,-1,-1,-1,-1
+"Geetanjali Institute of Technical Studies, Udaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,9888,1385,-1,1892,-1,-1,-1,-1,-1
+"Geetanjali Institute of Technical Studies, Udaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,8794,1602,-1,3065,-1,-1,-1,-1,0
+"Arya College of Engineering and Research Centre, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engineering and Research Centre, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10033,-1,-1,-1,-1,-1,-1,-1,-1
+"Arya College of Engineering and Research Centre, Jaipur",COMPUTER SCIENCE & DESIGN(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",ELECTRICAL ENGINEERING(SFS),SFS,10246,-1,-1,-1,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",ELECTRONICS & COMM.(SFS),SFS,10514,-1,-1,3003,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",INFORMATION TECHNOLOGY(SFS),SFS,10293,-1,-1,-1,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",ARTIFICIAL INTELLIGENCE(SFS),SFS,10156,-1,-1,-1,-1,-1,-1,-1,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",COMPUTER SCIENCE & ENGG.(SFS),SFS,3599,726,268,1328,405,-1,-1,475,-1
+"B K Birla Institute of Engg. and Technology, Pilani, Jhunjhunu",COMPUTER SCIENCE & ENGINEERING-DATA SCIENCE(SFS),SFS,10552,1259,432,2863,-1,-1,-1,-1,-1
+"Poornima Institute of Engineering and Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,9150,-1,-1,-1,-1,-1,-1,-1,0
+"Poornima Institute of Engineering and Technology, Jaipur",COMPUTER ENGINEERING(SFS),SFS,5731,1060,338,1817,-1,-1,-1,-1,-1
+"Poornima Institute of Engineering and Technology, Jaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,5182,1078,296,1693,-1,-1,-1,-1,-1
+"Poornima Institute of Engineering and Technology, Jaipur",ARTIFICIAL INTELLIGENCE AND DATA SCIENCE(SFS),SFS,8272,1441,-1,2649,-1,-1,-1,-1,-1
+"Poornima Institute of Engineering and Technology, Jaipur",COMPUTER ENGINEERING(Regional)(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Jhalawar",CIVIL ENGINEERING(SFS),SFS,9277,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Jhalawar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Jhalawar",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Jhalawar",INFORMATION TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Jhalawar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Jhalawar",COMPUTER SCIENCE & ENGG.(SFS),SFS,10020,1503,-1,1598,-1,-1,-1,-1,-1
+"Government Mahila Engineering College, Ajmer",ELECTRICAL ENGINEERING(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",ELECTRONICS AND COMM.(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",ELECTRICAL & ELECTRONICS(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",INFORMATION TECHNOLOGY(SFS),SFS,0,0,281,0,351,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",MECHANICAL ENGINEERING(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,0,0,112,0,235,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",INTERNET OF THINGS(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Government Mahila Engineering College, Ajmer",ARTIFICIAL INTELLIGENCE & MACHINE LEARNING(SFS),SFS,0,0,384,0,-1,0,-1,0,-1
+"Government Engineering College, Bharatpur",CIVIL ENGINEERING(SFS),SFS,10010,-1,-1,-1,-1,869,-1,-1,-1
+"Government Engineering College, Bharatpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Bharatpur",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Bharatpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Bharatpur",COMPUTER SCIENCE & ENGG.(SFS),SFS,8425,1451,-1,1877,-1,853,-1,-1,-1
+"Government Engineering College, Bharatpur",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,10378,-1,-1,-1,-1,-1,-1,-1,0
+"Bikaner Technical University, Bikaner",CIVIL ENGINEERING(SFS),SFS,10571,-1,-1,2440,-1,-1,-1,479,-1
+"Bikaner Technical University, Bikaner",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bikaner Technical University, Bikaner",ELECTRONICS & COMM.(SFS),SFS,9220,-1,-1,-1,-1,-1,-1,-1,0
+"Bikaner Technical University, Bikaner",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Bikaner Technical University, Bikaner",CERAMIC ENGINEERING & TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Bikaner Technical University, Bikaner",COMPUTER SCIENCE & ENGG.(SFS),SFS,5171,730,-1,1348,-1,-1,-1,-1,-1
+"Bikaner Technical University, Bikaner",SMART AGRITECH(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Bikaner Technical University, Bikaner",COMPUTER SCIENCE & ENGINEERING-CYBER SECURITY(SFS),SFS,3102,767,213,1094,475,862,-1,170,0
+"Bikaner Technical University, Bikaner",ARTIFICIAL INTELLIGENCE AND DATA SCIENCE(SFS),SFS,6491,882,-1,1256,-1,-1,-1,-1,0
+"JIET Institute of Design and Technology , Jodhpur",ARTIFICIAL INTELLIGENCE & MACHINE LEARNING(SFS),SFS,10088,-1,-1,3007,-1,-1,-1,-1,-1
+"JIET Institute of Design and Technology , Jodhpur",DATA SCIENCE (SFS),SFS,10179,-1,-1,-1,-1,-1,-1,-1,-1
+"Gurukul Institute of Engineering and Technology, Kota",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Gurukul Institute of Engineering and Technology, Kota",COMPUTER ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Gurukul Institute of Engineering and Technology, Kota",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Gurukul Institute of Engineering and Technology, Kota",ELECTRONICS  AND  COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Gurukul Institute of Engineering and Technology, Kota",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahatma Gandhi Engineering College, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahatma Gandhi Engineering College, Jaipur",COMPUTER ENGINEERING(SFS),SFS,10585,-1,-1,-1,-1,-1,-1,-1,0
+"Mahatma Gandhi Engineering College, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahatma Gandhi Engineering College, Jaipur",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Mahatma Gandhi Engineering College, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Modern Institute of Technology and Research Centre, Alwar",CIVIL ENGINEERING(SFS),SFS,10168,-1,-1,-1,-1,-1,-1,-1,-1
+"Modern Institute of Technology and Research Centre, Alwar",ELECTRICAL ENGINEERING(SFS),SFS,9752,-1,-1,-1,-1,-1,-1,451,-1
+"Modern Institute of Technology and Research Centre, Alwar",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Modern Institute of Technology and Research Centre, Alwar",MECHANICAL ENGINEERING(SFS),SFS,9389,-1,-1,-1,-1,-1,-1,-1,-1
+"Modern Institute of Technology and Research Centre, Alwar",COMPUTER SCIENCE & ENGG.(SFS),SFS,10255,1522,-1,2591,-1,-1,-1,-1,-1
+"Modern Institute of Technology and Research Centre, Alwar",ARTIFICIAL INTELLIGENCE & DATA SCIENCE(SFS),SFS,10477,-1,-1,2422,-1,-1,-1,-1,-1
+"Vyas Institute of Engineering and Technology, Jodhpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vyas Institute of Engineering and Technology, Jodhpur",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vyas Institute of Engineering and Technology, Jodhpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vyas Institute of Engineering and Technology, Jodhpur",COMPUTER SCIENCE & ENGG.(SFS),SFS,9364,-1,-1,-1,-1,-1,-1,-1,0
+"Vyas College of Engineering and Technology, Jodhpur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vyas College of Engineering and Technology, Jodhpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Vyas College of Engineering and Technology, Jodhpur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"SLBS Engineering College, Jodhpur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"SLBS Engineering College, Jodhpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"SLBS Engineering College, Jodhpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"SLBS Engineering College, Jodhpur",PETROLEUM ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vivekananda Institute of Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,10432,-1,-1,-1,-1,-1,-1,476,-1
+"Vivekananda Institute of Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,10212,-1,-1,-1,-1,-1,-1,420,-1
+"Vivekananda Institute of Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,10464,-1,-1,-1,-1,-1,-1,-1,-1
+"Vivekananda Institute of Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10530,-1,-1,-1,-1,-1,-1,-1,-1
+"Aravali Institute of Technical Studies, Udaipur",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aravali Institute of Technical Studies, Udaipur",COMPUTER ENGINEERING (SFS),SFS,10030,-1,-1,-1,-1,-1,-1,-1,-1
+"Aravali Institute of Technical Studies, Udaipur",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aravali Institute of Technical Studies, Udaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Aravali Institute of Technical Studies, Udaipur",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"S.S. College of Engineering, Udaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"S.S. College of Engineering, Udaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"S.S. College of Engineering, Udaipur",MINING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"S.S. College of Engineering, Udaipur",COMPUTER ENGINEERING(SFS),SFS,10273,-1,-1,-1,-1,-1,-1,-1,-1
+"Techno India NJR Institute of Technology, Udaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Techno India NJR Institute of Technology, Udaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Techno India NJR Institute of Technology, Udaipur",ELECTRONICS AND COMM.(SFS),SFS,10419,-1,-1,-1,-1,-1,-1,-1,-1
+"Techno India NJR Institute of Technology, Udaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Techno India NJR Institute of Technology, Udaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,7932,1049,-1,2220,-1,-1,-1,-1,-1
+"Shri Bhawani Niketan Inst. of Tech. and Management, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shri Bhawani Niketan Inst. of Tech. and Management, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shri Bhawani Niketan Inst. of Tech. and Management, Jaipur",ELECTRONICS  AND  COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shri Bhawani Niketan Inst. of Tech. and Management, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shri Bhawani Niketan Inst. of Tech. and Management, Jaipur",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,10416,1420,-1,-1,-1,-1,-1,-1,0
+"Chartered Institute of Technology, Abu Road, Sirohi",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Chartered Institute of Technology, Abu Road, Sirohi",ELECTRICAL ENGINEERING(SFS),SFS,10187,-1,-1,-1,-1,-1,-1,-1,-1
+"Chartered Institute of Technology, Abu Road, Sirohi",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Chartered Institute of Technology, Abu Road, Sirohi",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Chartered Institute of Technology, Abu Road, Sirohi",COMPUTER SCIENCE & ENGG.(SFS),SFS,10540,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Institute of Engg. and Technology, Chittorgarh",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engg. and Technology, Chittorgarh",COMPUTER ENGINEERING(SFS),SFS,8898,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engg. and Technology, Chittorgarh",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engg. and Technology, Chittorgarh",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Rajasthan Institute of Engg. and Technology, Chittorgarh",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shree Digambar Inst. of Technology, Mitrapura, Dausa",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shree Digambar Inst. of Technology, Mitrapura, Dausa",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shree Digambar Inst. of Technology, Mitrapura, Dausa",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Shree Digambar Inst. of Technology, Mitrapura, Dausa",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Manda Institute of Technology, Bikaner",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Manda Institute of Technology, Bikaner",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Manda Institute of Technology, Bikaner",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Manda Institute of Technology, Bikaner",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Manda Institute of Technology, Bikaner",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"St. Wilfred s Institute of Engineering and Technology, Ajmer",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"St. Wilfred s Institute of Engineering and Technology, Ajmer",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"St. Wilfred s Institute of Engineering and Technology, Ajmer",MECHANICAL ENGINEERING(SFS),SFS,10418,-1,-1,-1,-1,-1,-1,-1,-1
+"St. Wilfred s Institute of Engineering and Technology, Ajmer",COMPUTER SCIENCE & ENGG.(SFS),SFS,10542,1418,-1,2754,-1,767,-1,-1,0
+"Shekhawati Inst. of Engg. and Technology, Sikar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shekhawati Inst. of Engg. and Technology, Sikar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shekhawati Inst. of Engg. and Technology, Sikar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shekhawati Inst. of Engg. and Technology, Sikar",AGRICULTURE(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Shekhawati Inst. of Engg. and Technology, Sikar",COMPUTER SCIENCE & ENGG.(SFS),SFS,10398,-1,-1,-1,-1,-1,-1,-1,-1
+"Raj Engineering College, Jodhpur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Raj Engineering College, Jodhpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Raj Engineering College, Jodhpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Raj Engineering College, Jodhpur",MINING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Surendra Group of Institutions, Sriganganagar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Surendra Group of Institutions, Sriganganagar",ELECTRICAL AND ELECTRONICS (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Surendra Group of Institutions, Sriganganagar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Surendra Group of Institutions, Sriganganagar",COMPUTER SCIENCE ENGG.(SFS),SFS,10439,-1,-1,3068,-1,-1,-1,-1,0
+"Jaipur Institute of Technology, Group of Institutions, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Institute of Technology, Group of Institutions, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Institute of Technology, Group of Institutions, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Jaipur Institute of Technology, Group of Institutions, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Jaipur Institute of Technology, Group of Institutions, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,10304,-1,-1,-1,-1,764,-1,-1,-1
+"Rajdhani Engineering College, Jaipur",CIVIL ENGINEERING(SFS),SFS,10372,-1,-1,-1,-1,998,-1,-1,-1
+"Rajdhani Engineering College, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,10369,-1,-1,-1,-1,979,-1,-1,-1
+"Rajdhani Engineering College, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,10326,-1,-1,-1,-1,990,-1,513,-1
+"Rajdhani Engineering College, Jaipur",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Dr. Radhakrishnan Institute of Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Dr. Radhakrishnan Institute of Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Dr. Radhakrishnan Institute of Technology, Jaipur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Dr. Radhakrishnan Institute of Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Dr. Radhakrishnan Institute of Technology, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Maharani Girls Engineering College, Jaipur",CIVIL ENGINEERING(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Maharani Girls Engineering College, Jaipur",ELECTRONICS & COMM.(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Maharani Girls Engineering College, Jaipur",ELECTRICAL & ELECTRONICS(SFS),SFS,0,0,-1,0,-1,0,-1,0,-1
+"Maharani Girls Engineering College, Jaipur",COMPUTER SCIENCE & ENGG.(SFS),SFS,0,0,-1,0,401,0,-1,0,-1
+"Rajasthan Engineering College, Dausa",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Engineering College, Dausa",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Rajasthan Engineering College, Dausa",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"CLG Institute of Engg. and Technology, Sumerpur, Pali",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"CLG Institute of Engg. and Technology, Sumerpur, Pali",ELECTRICAL ENGINEERING(SFS),SFS,10434,-1,-1,-1,-1,-1,-1,-1,0
+"CLG Institute of Engg. and Technology, Sumerpur, Pali",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"CLG Institute of Engg. and Technology, Sumerpur, Pali",COMPUTER SCIENCE & ENGG.(SFS),SFS,10454,-1,-1,2791,-1,1059,-1,-1,0
+"Nathdwara Inst. of Engg. and Tech., Nathdwara, Rajsamand",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aryabhatta College of Engg. and Research Center, Ajmer",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aryabhatta College of Engg. and Research Center, Ajmer",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aryabhatta College of Engg. and Research Center, Ajmer",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Aryabhatta College of Engg. and Research Center, Ajmer",COMPUTER SCIENCE & ENGG.(SFS),SFS,9562,-1,-1,2562,-1,692,169,440,-1
+"Anand International College of Engineering, Jaipur",CIVIL ENGINEERING(SFS),SFS,9981,-1,-1,-1,-1,-1,-1,-1,-1
+"Anand International College of Engineering, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Anand International College of Engineering, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Anand International College of Engineering, Jaipur",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,7239,1310,388,2230,-1,923,-1,337,-1
+"Anand International College of Engineering, Jaipur",COMPUTER SCIENCE & ENGINEERING (ARTIFICIAL INTELLI,SFS,10536,-1,-1,-1,-1,-1,-1,383,-1
+"BLM Institute of Tech. and Management Sc., Khetri, Jhunjhunu",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"BLM Institute of Tech. and Management Sc., Khetri, Jhunjhunu",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"BLM Institute of Tech. and Management Sc., Khetri, Jhunjhunu",ELECTRONICS  AND  COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"BLM Institute of Tech. and Management Sc., Khetri, Jhunjhunu",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Northern Institutute of Engg. and Technical Campus, Alwar",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Northern Institutute of Engg. and Technical Campus, Alwar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Northern Institutute of Engg. and Technical Campus, Alwar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Northern Institutute of Engg. and Technical Campus, Alwar",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Pratap Institutute of Technology and Science, Sikar",CIVIL ENGINEERING(SFS),SFS,10458,-1,-1,-1,-1,-1,-1,-1,-1
+"Pratap Institutute of Technology and Science, Sikar",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Pratap Institutute of Technology and Science, Sikar",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Pratap Institutute of Technology and Science, Sikar",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Pratap Institutute of Technology and Science, Sikar",COMPUTER SCIENCE & ENGG.(SFS),SFS,9942,-1,-1,-1,-1,-1,-1,413,-1
+"Vedic Gurukul Institute of Engg. and Technology, Jaipur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vedic Gurukul Institute of Engg. and Technology, Jaipur",COMPUTER ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vedic Gurukul Institute of Engg. and Technology, Jaipur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vedic Gurukul Institute of Engg. and Technology, Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Vedic Gurukul Institute of Engg. and Technology, Jaipur",ELECTRICAL AND COMPUTER ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"School of Aeronautics Neemrana, Alwar",MECHATRONICS(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"School of Aeronautics Neemrana, Alwar",AERONAUTICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"School of Aeronautics Neemrana, Alwar",AERONAUTICAL ENGG.II SHIFT)(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sawai Madhopur College of Engg. and Technology, Sawai Madhopur",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sawai Madhopur College of Engg. and Technology, Sawai Madhopur",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sawai Madhopur College of Engg. and Technology, Sawai Madhopur",ELECTRONICS AND COMMUNICATION ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sawai Madhopur College of Engg. and Technology, Sawai Madhopur",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Sawai Madhopur College of Engg. and Technology, Sawai Madhopur",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Banswara",CIVIL ENGINEERING(SFS),SFS,10547,-1,-1,-1,-1,-1,-1,439,-1
+"Government Engineering College, Banswara",ELECTRICAL ENGINEERING(SFS),SFS,10120,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Banswara",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Banswara",COMPUTER SCIENCE & ENGG.(SFS),SFS,8474,1387,-1,1972,-1,-1,-1,535,-1
+"Bal Krishna Institute of Technology, Kota",AUTOMOBILE ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Bal Krishna Institute of Technology, Kota",CIVIL ENGINEERING (SFS),SFS,10546,-1,-1,-1,-1,-1,-1,-1,0
+"Bal Krishna Institute of Technology, Kota",ELECTRICAL ENGINEERING (SFS),SFS,10019,-1,-1,-1,-1,1056,-1,-1,0
+"Bal Krishna Institute of Technology, Kota",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Bal Krishna Institute of Technology, Kota",COMPUTER SCIENCE AND ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahaveer Institute of Technology and Science, Jadan, Pali",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahaveer Institute of Technology and Science, Jadan, Pali",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Mahaveer Institute of Technology and Science, Jadan, Pali",COMPUTER SCIENCE & ENGG.(SFS),SFS,8517,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Baran",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Baran",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Baran",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Baran",COMPUTER SCIENCE & ENGG.(SFS),SFS,9312,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Dholpur",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Dholpur",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Dholpur",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Dholpur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Karauli",CIVIL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Karauli",ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Karauli",ELECTRONICS & COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Karauli",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Engineering College, Karauli",COMPUTER SCIENCE & ENGG.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Barmer",CIVIL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Barmer",ELECTRICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Barmer",ELECTRONICS AND COMM.(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Barmer",MECHANICAL ENGINEERING (SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Barmer",PETROLEUM ENGINEERING (SFS),SFS,10506,-1,-1,-1,-1,-1,-1,-1,-1
+"Government Engineering College, Barmer",CHEMICAL ENGINEERING (SFS),SFS,10291,1650,-1,-1,-1,-1,-1,-1,0
+"Government Engineering College, Barmer",COMPUTER SCIENCE & ENGINEERING(ARTIFICIAL INTELLIG,SFS,7763,1351,-1,1513,-1,-1,-1,-1,0
+"CIPET Institute of Plastics Technology , Jaipur",MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+"CIPET Institute of Plastics Technology , Jaipur",PETRO CHEMICAL(SFS),SFS,8971,-1,-1,-1,-1,-1,-1,-1,0
+"CIPET Institute of Plastics Technology , Jaipur",PLASTIC TECHNOLOGY(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+Mohanlal Sukhadia University,CIVIL ENGINEERING(SFS),SFS,10485,-1,-1,-1,-1,-1,-1,-1,-1
+Mohanlal Sukhadia University,ELECTRICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+Mohanlal Sukhadia University,ELECTRONICS  AND  COMM.(SFS),SFS,10389,-1,-1,-1,-1,-1,-1,-1,-1
+Mohanlal Sukhadia University,MECHANICAL ENGINEERING(SFS),SFS,-1,-1,-1,-1,-1,-1,-1,-1,-1
+Mohanlal Sukhadia University,COMPUTER SCIENCE & ENGG.(SFS),SFS,3521,618,146,1096,398,1080,-1,80,-1
+Faculty of Agriculture Engineering,AGRICULTURE ENGINEERING(SFS),SFS,-1,-1,0,-1,-1,-1,-1,-1,0
+Faculty of Agriculture Engineering,AGRICULTURE ENGINEERING(GAS),GAS,10529,-1,-1,2529,-1,-1,-1,-1,0
