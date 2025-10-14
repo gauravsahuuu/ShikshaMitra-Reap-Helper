@@ -1,28 +1,59 @@
+# eduai_app.py
 import streamlit as st
 import pandas as pd
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 import smtplib
 from email.mime.text import MIMEText
-import google.generativeai as genai
 import re
+import chromadb
+
+# LangChain / embeddings / llm
+from langchain_chroma import Chroma
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 # ----------------------------
-# CONFIG
+# CONFIG / SECRETS
 # ----------------------------
-st.set_page_config(page_title="ShikshaMitra", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="EduAI", page_icon="🎓", layout="wide")
 
-# Load secrets from .streamlit/secrets.toml
-MONGO_URI = st.secrets["MONGO_URI"]
-DB_NAME = st.secrets.get("DB_NAME", "SIH")
-USERS_COLL = st.secrets.get("USERS_COLL", "users")
-ISSUES_DB = st.secrets.get("ISSUES_DB", "issue_tracker")
-ISSUES_COLL = st.secrets.get("ISSUES_COLL", "issues")
-GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
+# MongoDB (from secrets.toml)
+MONGO_URI = st.secrets["mongo"]["connection_string"]
+DB_NAME = st.secrets["mongo"]["database"]
+USERS_COLL = st.secrets["mongo"]["collection"]
+ISSUES_DB = st.secrets["mongo"]["issues_db"]
+ISSUES_COLL = st.secrets["mongo"]["issues_collection"]
 
-MAIL_USERNAME = st.secrets["MAIL_USERNAME"]
-MAIL_PASSWORD = st.secrets["MAIL_PASSWORD"]
-MAIL_SENDER = st.secrets.get("MAIL_SENDER", MAIL_USERNAME)
+# Email / SMTP
+MAIL_USERNAME = st.secrets["email"]["username"]
+MAIL_PASSWORD = st.secrets["email"]["password"]
+MAIL_SENDER = st.secrets["email"]["sender"]
+
+# Chroma Cloud
+CHROMA_API_KEY = st.secrets["chroma"]["api_key"]
+CHROMA_TENANT = st.secrets["chroma"]["tenant_id"]
+CHROMA_DATABASE = st.secrets["chroma"]["database_id"]
+COLLECTION_NAME = st.secrets["chroma"]["collection_id"]
+
+# OpenRouter (LLM)
+OPENROUTER_API_KEY = st.secrets["openai"]["api_key"]
+OPENROUTER_BASE_URL = st.secrets["openai"]["base_url"]
+
+# Streamlit App secret
+SECRET_KEY = st.secrets["app"]["secret_key"]
+
+# Embeddings model (local)
+EMBEDDINGS_MODEL = "all-MiniLM-L6-v2"
+
+# System prompt for RAG
+SYSTEM_PROMPT = """You are a helpful RAG assistant using data from the LearnPal database.
+Use retrieved context to answer questions clearly and concisely.
+If information is missing, say so and suggest what to ask next.
+Cite sources as (source: <filename>:<page>) when possible.
+"""
 
 # ----------------------------
 # DB & Auth Helpers
@@ -65,33 +96,83 @@ def send_mail(to_email, subject, body):
         server.sendmail(MAIL_SENDER, [to_email], msg.as_string())
 
 # ----------------------------
-# Gemini Helper
+# RAG (Chroma Cloud + LangChain) Helpers
 # ----------------------------
-PROMPT_PREFIX = (
-    "If the user says 'hey' or 'hello', respond that you are ShikshaMitra "
-    "(REAP admission counselling helper). "
-    "I am applying for REAP (Rajasthan's engineering colleges' admission) counselling in Rajasthan. "
-    "Give a brief result. Generate data only on the basis of REAP counselling which you have or is available on the internet. "
-    "I don't want real-time data, I just want a rough idea. Even if you have no idea or it may vary, "
-    "if you have zero idea, you can say that you don't know about this and ask the user to raise a ticket."
-)
+@st.cache_resource
+def get_chroma_client():
+    return chromadb.CloudClient(
+        api_key=CHROMA_API_KEY,
+        tenant=CHROMA_TENANT,
+        database=CHROMA_DATABASE,
+    )
 
 @st.cache_resource
-def get_model():
-    genai.configure(api_key=GEMINI_API_KEY)
-    return genai.GenerativeModel("gemini-1.5-flash")
+def get_collection():
+    client = get_chroma_client()
+    return client.get_or_create_collection(name=COLLECTION_NAME)
 
-def format_text(text: str) -> str:
-    text = re.sub(r"\*\*(.*?)\*\*", lambda m: f"<b>{m.group(1)}</b>", text)
-    text = text.replace("*", "•")
-    text = text.replace("\n", "<br>")
-    return text
+@st.cache_resource
+def get_embeddings():
+    return HuggingFaceEmbeddings(model_name=EMBEDDINGS_MODEL)
 
-def ask_gemini(user_message: str) -> str:
-    model = get_model()
-    resp = model.generate_content(PROMPT_PREFIX + user_message)
-    txt = str(getattr(resp, "text", "") or "")
-    return format_text(txt)
+@st.cache_resource
+def get_vectorstore_and_retriever():
+    client = get_chroma_client()
+    vectorstore = Chroma(client=client, collection_name=COLLECTION_NAME, embedding_function=get_embeddings())
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
+    return vectorstore, retriever
+
+@st.cache_resource
+def get_llm():
+    return ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0.2,
+        api_key=OPENROUTER_API_KEY,
+        base_url=OPENROUTER_BASE_URL,
+    )
+
+prompt = ChatPromptTemplate.from_messages([
+    ("system", SYSTEM_PROMPT),
+    MessagesPlaceholder("messages"),
+    ("system", "Retrieved context:\n{context}"),
+])
+
+def build_context_from_chroma(query: str) -> str:
+    collection = get_collection()
+    try:
+        result = collection.query(
+            query_texts=[query],
+            n_results=5,
+            include=["metadatas", "documents"],
+        )
+    except Exception as e:
+        st.warning(f"[RAG] chroma query failed: {e}")
+        return ""
+
+    parts = []
+    docs = result.get("documents", [[]])[0]
+    metadatas = result.get("metadatas", [[]])[0]
+
+    for i, doc in enumerate(docs):
+        meta = metadatas[i] if i < len(metadatas) else {}
+        src = meta.get("source", "unknown")
+        page = meta.get("page", "NA")
+        snippet = str(doc).replace("\n", " ").strip()[:1000]
+        parts.append(f"[source: {src}:{page}] {snippet}")
+
+    ctx = "\n\n".join(parts)
+    return ctx[:3500] + " ...[truncated]" if len(ctx) > 3500 else ctx
+
+def generate_answer_with_rag(messages):
+    llm = get_llm()
+    last_user = next((m.content for m in reversed(messages) if isinstance(m, HumanMessage)), "")
+    context = build_context_from_chroma(last_user or "")
+    filled_prompt = prompt.invoke({"messages": messages, "context": context})
+    try:
+        resp = llm.invoke(filled_prompt)
+    except Exception as e:
+        return f"Error calling LLM: {e}"
+    return getattr(resp, "content", str(resp))
 
 # ----------------------------
 # App State
@@ -99,19 +180,19 @@ def ask_gemini(user_message: str) -> str:
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
     st.session_state.username = None
+
 if "chat_history" not in st.session_state:
-    # Use Streamlit chat schema: role in {"user","assistant"}, content is HTML-ready
     st.session_state.chat_history = []
+
+if "lc_messages" not in st.session_state:
+    st.session_state.lc_messages = [SystemMessage(content="Conversation started.")]
 
 # ----------------------------
 # Sidebar Navigation
 # ----------------------------
 st.sidebar.title("📌 Navigation")
 if st.session_state.authenticated:
-    page = st.sidebar.radio(
-        "Go to",
-        ["Home", "College Predictor", "Chatbot", "FAQs", "Submit Issue", "Logout"],
-    )
+    page = st.sidebar.radio("Go to", ["Home", "Chatbot", "FAQs", "Submit Issue", "Logout"])
 else:
     page = "Login"
 
@@ -119,11 +200,10 @@ else:
 # Pages
 # ----------------------------
 if page == "Login":
-    st.title("🎓 ShikshaMitra")
+    st.title("🎓 EduAI")
     tab_login, tab_register = st.tabs(["Login", "Register"])
 
     with tab_login:
-        st.subheader("Login")
         username = st.text_input("Username", key="login_user")
         password = st.text_input("Password", type="password", key="login_pass")
         if st.button("Login"):
@@ -136,9 +216,8 @@ if page == "Login":
                 st.error("Invalid username or password")
 
     with tab_register:
-        st.subheader("Register (Admin only)")
-        new_user = st.text_input("New Username")
-        new_pass = st.text_input("New Password", type="password")
+        new_user = st.text_input("New Username", key="reg_user")
+        new_pass = st.text_input("New Password", type="password", key="reg_pass")
         if st.button("Register"):
             err = register_user(new_user, new_pass)
             if err:
@@ -147,164 +226,51 @@ if page == "Login":
                 st.success("Registration successful")
 
 elif page == "Home":
-    st.title("🏠 Home - ShikshaMitra")
+    st.title("🏠 Home - EduAI")
     st.write(f"Welcome, **{st.session_state.username}**! 👋")
-    st.write("Choose an option from the sidebar.")
-
-elif page == "College Predictor":
-    st.title("🎯 College Predictor (REAP)")
-
-    @st.cache_data
-    def load_data():
-        return pd.read_csv("data/cutoffs_modified.csv")
-
-    df = load_data()
-
-    gender = st.selectbox("Gender", ["male", "female"])
-    sfs_gas = st.selectbox(
-        "SFS or GAS category", sorted(df["category"].dropna().astype(str).unique())
-    )
-    category = st.selectbox("Reservation Category", ["Gen", "EWS", "OBC", "SC", "ST"])
-    input_rank = st.number_input("Your Rank", min_value=1, step=1)
-
-    if st.button("Predict"):
-        filtered_df = df[df["category"].astype(str).str.strip() == sfs_gas.strip()]
-        category_column_map = {
-            "Gen": "gen",
-            "EWS": "mews" if gender == "male" else "fews",
-            "OBC": "mobc" if gender == "male" else "fobc",
-            "SC": "msc" if gender == "male" else "fsc",
-            "ST": "mst" if gender == "male" else "fst",
-        }
-        category_column = category_column_map.get(category)
-
-        if category_column not in filtered_df.columns:
-            st.error("Category column not found")
-        else:
-            filtered_df = filtered_df.copy()
-            filtered_df[category_column] = pd.to_numeric(
-                filtered_df[category_column], errors="coerce"
-            )
-            result_df = filtered_df[
-                (filtered_df[category_column] >= int(input_rank))
-                | (filtered_df[category_column].isna())
-            ][["Institute", "Branch", category_column]].rename(
-                columns={category_column: "Cutoff"}
-            )
-            st.dataframe(result_df, use_container_width=True)
+    st.write("Use the Chatbot tab for RAG-powered answers from your LearnPal collection.")
 
 elif page == "Chatbot":
-    st.title("🤖 ShikshaMitra Chatbot")
+    st.title("🤖 EduAI — RAG Chat")
 
-    # Display existing conversation with default Streamlit chat styling
     for msg in st.session_state.chat_history:
         with st.chat_message(msg["role"]):
-            # Assistant messages may include <b>, bullets, and <br>
-            st.markdown(msg["content"], unsafe_allow_html=True)
+            st.markdown(msg["content"])
 
-    # Chat input stays docked at the bottom center, submits on Enter by default
-    prompt = st.chat_input("Type your question about REAP...")
-    if prompt:
-        # Append user message
-        st.session_state.chat_history.append({"role": "user", "content": prompt})
+    user_input = st.chat_input("Ask your question...")
+    if user_input:
+        st.session_state.chat_history.append({"role": "user", "content": user_input})
+        st.session_state.lc_messages.append(HumanMessage(content=user_input))
+
         with st.chat_message("user"):
-            st.markdown(prompt)
+            st.markdown(user_input)
 
-        # Generate assistant reply
-        reply_html = ask_gemini(prompt)
-        st.session_state.chat_history.append({"role": "assistant", "content": reply_html})
         with st.chat_message("assistant"):
-            st.markdown(reply_html, unsafe_allow_html=True)
+            with st.spinner("Thinking..."):
+                answer = generate_answer_with_rag(st.session_state.lc_messages)
+            st.markdown(answer)
+
+        st.session_state.chat_history.append({"role": "assistant", "content": answer})
+        st.session_state.lc_messages.append(AIMessage(content=answer))
 
 elif page == "FAQs":
-    st.title("❓ FAQs - ShikshaMitra")
-
-    st.subheader("General")
-    st.markdown("""
-**Is there any helpline for REAP -2024?**  
-Yes. The Helpline No.- 0141-2702344, 9462015808, 9462015080 (Call between 9 AM to 6 PM Only)
-
-**I passed my 10th and 12th from Rajasthan still do I need domicile certificate?**  
-Yes, you require domicile certificate of Rajasthan otherwise you will be considered as out of Rajasthan candidate.
-
-**What is the validity of the Category Certificate (SC/ST/OBC/EWS-Gen.) and PwD certificate?**  
-- OBC certificate should not be issued before **01/09/2023**. A grace period of **two years** is admissible with an undertaking.  
-- Undertaking by OBC/MBC (non-creamy layer) if within grace period.  
-- Certificates for PwD and Ex-Servicemen if applicable.
-    
-**What are the requirements for EWS candidates?**  
-Income/eligibility & document requirements as per official guidelines.
-
-**When will the Online Application form for REAP 2024-25 be available?**  
-Registration starts **27/06/2024 onward**. Websites: `www.reapbtech24.com`, `www.reapbarch24.com`.
-
-**Whether the application fee excludes the Common Service charge?**  
-Fee is **₹590 (₹500 + 18% GST)** per counseling mode. Non-refundable and non-transferable.
-    
-**What is reservation criteria and seat matrix of REAP 2024-25?**  
-See page **8** of the REAP booklet (web portal).
-
-**What documents to carry at reporting?**  
-See page **14** of the REAP booklet (web portal).
-""")
-
-    st.subheader("Data Correction")
-    st.markdown("""
-**How can I change the subject group I selected incorrectly?**  
-Raise a ticket on the **candidate panel** and keep the ticket number.
-
-**How can I change my options/choice if I filled them incorrectly?**  
-Raise a ticket on the **candidate panel** and keep the ticket number.
-
-**Procedure for Filling Online Application & College Choice Form?**  
-1) Pay application/registration fee  
-2) Fill online application & choice form  
-3) Receive confirmation email/SMS  
-4) Print hardcopies after final submission
-
-**Where can I check my subject group?**  
-See page **28** of the REAP booklet.
-
-**How can I correct personal details/income if I can’t go back?**  
-Raise a ticket on the **candidate panel** with all credentials.
-""")
-
-    st.subheader("Transaction")
-    st.markdown("""
-**My registration fee is deducted but registration not done.**  
-Use **Check Transaction Status** with your temporary transaction number. You’ll get the permanent number by email (check spam too).
-
-**Problem due to a failed transaction?**  
-If the gateway doesn’t confirm in real time, payment isn’t complete. Pay again online; the failed transaction amount will be refunded.
-""")
-
-    st.subheader("Technical Issue")
-    st.markdown("""
-**What should I do if I face technical issues on the website?**  
-Clear browser cache or contact technical support.
-
-**How do I reset my account password?**  
-Use the **Forgot Password** option on the login page.
-""")
+    st.title("❓ FAQs - EduAI")
+    st.markdown("Common queries and REAP-related FAQs here...")
 
 elif page == "Submit Issue":
     st.title("🛠️ Submit an Issue")
     name = st.text_input("Name")
     email = st.text_input("Email")
-    mobile = st.text_input("Mobile")
     issue = st.text_area("Describe your issue")
 
     if st.button("Submit"):
         if not (name and email and issue):
-            st.error("Name, Email, and Issue are required.")
+            st.error("Please fill all fields.")
         else:
-            issues_collection().insert_one(
-                {"name": name, "email": email, "mobile": mobile, "issue": issue}
-            )
+            issues_collection().insert_one({"name": name, "email": email, "issue": issue})
             try:
-                body = f"Hello {name},\n\nThank you for submitting your issue.\n\nYour Issue: {issue}\n\nBest,\nShikshaMitra Support Team"
-                send_mail(email, "Issue Submission Confirmation", body)
-                st.success("Issue submitted. Confirmation email sent.")
+                send_mail(email, "Issue Submitted", f"Hello {name}, we received your issue:\n\n{issue}")
+                st.success("Issue submitted successfully.")
             except Exception as e:
                 st.warning(f"Issue saved, but email failed: {e}")
 
