@@ -153,12 +153,16 @@ def build_context_from_chroma(query: str) -> str:
 def generate_answer_with_rag(messages):
     llm = get_llm()
     last_user = next((m.content for m in reversed(messages) if isinstance(m, HumanMessage)), "")
-    context = build_context_from_chroma(last_user)
-    filled_prompt = prompt.invoke({"messages": messages, "context": context})
+    context = build_context_from_chroma(last_user or "")
+
+    # ✅ FIX: ChatPromptTemplate has no `.invoke()`, must use `.format_messages()`
+    filled_prompt = prompt.format_messages(messages=messages, context=context)
+
     try:
         resp = llm.invoke(filled_prompt)
     except Exception as e:
         return f"LLM error: {e}"
+
     return getattr(resp, "content", str(resp))
 
 # ----------------------------
@@ -305,3 +309,4 @@ elif page == "Logout":
         st.session_state.username = None
         st.success("You have been logged out")
         st.rerun()
+
