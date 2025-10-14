@@ -1,4 +1,4 @@
-# eduai_app.py
+# shikshamitra_app.py
 import streamlit as st
 import pandas as pd
 from pymongo import MongoClient
@@ -18,7 +18,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 # ----------------------------
 # CONFIG / SECRETS
 # ----------------------------
-st.set_page_config(page_title="EduAI", page_icon="🎓", layout="wide")
+st.set_page_config(page_title="ShikshaMitra", page_icon="🎓", layout="wide")
 
 # MongoDB (from secrets.toml)
 MONGO_URI = st.secrets["mongo"]["connection_string"]
@@ -42,16 +42,13 @@ COLLECTION_NAME = st.secrets["chroma"]["collection_id"]
 OPENROUTER_API_KEY = st.secrets["openai"]["api_key"]
 OPENROUTER_BASE_URL = st.secrets["openai"]["base_url"]
 
-# Streamlit App secret
-SECRET_KEY = st.secrets["app"]["secret_key"]
-
-# Embeddings model (local)
+# Embeddings model
 EMBEDDINGS_MODEL = "all-MiniLM-L6-v2"
 
 # System prompt for RAG
-SYSTEM_PROMPT = """You are a helpful RAG assistant using data from the LearnPal database.
-Use retrieved context to answer questions clearly and concisely.
-If information is missing, say so and suggest what to ask next.
+SYSTEM_PROMPT = """You are ShikshaMitra — a helpful REAP admission counselling assistant.
+You use retrieved context from the LearnPal database to answer REAP-related queries clearly and concisely.
+If information is missing, say so and suggest raising a ticket.
 Cite sources as (source: <filename>:<page>) when possible.
 """
 
@@ -96,7 +93,7 @@ def send_mail(to_email, subject, body):
         server.sendmail(MAIL_SENDER, [to_email], msg.as_string())
 
 # ----------------------------
-# RAG (Chroma Cloud + LangChain) Helpers
+# RAG Chatbot (Chroma + LangChain)
 # ----------------------------
 @st.cache_resource
 def get_chroma_client():
@@ -108,19 +105,11 @@ def get_chroma_client():
 
 @st.cache_resource
 def get_collection():
-    client = get_chroma_client()
-    return client.get_or_create_collection(name=COLLECTION_NAME)
+    return get_chroma_client().get_or_create_collection(name=COLLECTION_NAME)
 
 @st.cache_resource
 def get_embeddings():
     return HuggingFaceEmbeddings(model_name=EMBEDDINGS_MODEL)
-
-@st.cache_resource
-def get_vectorstore_and_retriever():
-    client = get_chroma_client()
-    vectorstore = Chroma(client=client, collection_name=COLLECTION_NAME, embedding_function=get_embeddings())
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
-    return vectorstore, retriever
 
 @st.cache_resource
 def get_llm():
@@ -146,44 +135,40 @@ def build_context_from_chroma(query: str) -> str:
             include=["metadatas", "documents"],
         )
     except Exception as e:
-        st.warning(f"[RAG] chroma query failed: {e}")
+        st.warning(f"[RAG] Chroma query failed: {e}")
         return ""
 
-    parts = []
     docs = result.get("documents", [[]])[0]
-    metadatas = result.get("metadatas", [[]])[0]
-
+    metas = result.get("metadatas", [[]])[0]
+    parts = []
     for i, doc in enumerate(docs):
-        meta = metadatas[i] if i < len(metadatas) else {}
+        meta = metas[i] if i < len(metas) else {}
         src = meta.get("source", "unknown")
         page = meta.get("page", "NA")
         snippet = str(doc).replace("\n", " ").strip()[:1000]
         parts.append(f"[source: {src}:{page}] {snippet}")
-
     ctx = "\n\n".join(parts)
     return ctx[:3500] + " ...[truncated]" if len(ctx) > 3500 else ctx
 
 def generate_answer_with_rag(messages):
     llm = get_llm()
     last_user = next((m.content for m in reversed(messages) if isinstance(m, HumanMessage)), "")
-    context = build_context_from_chroma(last_user or "")
+    context = build_context_from_chroma(last_user)
     filled_prompt = prompt.invoke({"messages": messages, "context": context})
     try:
         resp = llm.invoke(filled_prompt)
     except Exception as e:
-        return f"Error calling LLM: {e}"
+        return f"LLM error: {e}"
     return getattr(resp, "content", str(resp))
 
 # ----------------------------
-# App State
+# Session State
 # ----------------------------
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
     st.session_state.username = None
-
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
-
 if "lc_messages" not in st.session_state:
     st.session_state.lc_messages = [SystemMessage(content="Conversation started.")]
 
@@ -192,7 +177,10 @@ if "lc_messages" not in st.session_state:
 # ----------------------------
 st.sidebar.title("📌 Navigation")
 if st.session_state.authenticated:
-    page = st.sidebar.radio("Go to", ["Home", "Chatbot", "FAQs", "Submit Issue", "Logout"])
+    page = st.sidebar.radio(
+        "Go to",
+        ["Home", "College Predictor", "Chatbot", "FAQs", "Submit Issue", "Logout"],
+    )
 else:
     page = "Login"
 
@@ -200,10 +188,11 @@ else:
 # Pages
 # ----------------------------
 if page == "Login":
-    st.title("🎓 EduAI")
+    st.title("🎓 ShikshaMitra")
     tab_login, tab_register = st.tabs(["Login", "Register"])
 
     with tab_login:
+        st.subheader("Login")
         username = st.text_input("Username", key="login_user")
         password = st.text_input("Password", type="password", key="login_pass")
         if st.button("Login"):
@@ -216,8 +205,9 @@ if page == "Login":
                 st.error("Invalid username or password")
 
     with tab_register:
-        new_user = st.text_input("New Username", key="reg_user")
-        new_pass = st.text_input("New Password", type="password", key="reg_pass")
+        st.subheader("Register (Admin only)")
+        new_user = st.text_input("New Username")
+        new_pass = st.text_input("New Password", type="password")
         if st.button("Register"):
             err = register_user(new_user, new_pass)
             if err:
@@ -226,51 +216,85 @@ if page == "Login":
                 st.success("Registration successful")
 
 elif page == "Home":
-    st.title("🏠 Home - EduAI")
+    st.title("🏠 Home - ShikshaMitra")
     st.write(f"Welcome, **{st.session_state.username}**! 👋")
-    st.write("Use the Chatbot tab for RAG-powered answers from your LearnPal collection.")
+    st.write("Choose an option from the sidebar.")
+
+elif page == "College Predictor":
+    st.title("🎯 College Predictor (REAP)")
+
+    @st.cache_data
+    def load_data():
+        return pd.read_csv("data/cutoffs_modified.csv")
+
+    df = load_data()
+    gender = st.selectbox("Gender", ["male", "female"])
+    sfs_gas = st.selectbox("SFS or GAS category", sorted(df["category"].dropna().astype(str).unique()))
+    category = st.selectbox("Reservation Category", ["Gen", "EWS", "OBC", "SC", "ST"])
+    input_rank = st.number_input("Your Rank", min_value=1, step=1)
+
+    if st.button("Predict"):
+        filtered_df = df[df["category"].astype(str).str.strip() == sfs_gas.strip()]
+        col_map = {
+            "Gen": "gen",
+            "EWS": "mews" if gender == "male" else "fews",
+            "OBC": "mobc" if gender == "male" else "fobc",
+            "SC": "msc" if gender == "male" else "fsc",
+            "ST": "mst" if gender == "male" else "fst",
+        }
+        category_column = col_map.get(category)
+        if category_column not in filtered_df.columns:
+            st.error("Category column not found")
+        else:
+            filtered_df = filtered_df.copy()
+            filtered_df[category_column] = pd.to_numeric(filtered_df[category_column], errors="coerce")
+            result_df = filtered_df[
+                (filtered_df[category_column] >= int(input_rank))
+                | (filtered_df[category_column].isna())
+            ][["Institute", "Branch", category_column]].rename(columns={category_column: "Cutoff"})
+            st.dataframe(result_df, use_container_width=True)
 
 elif page == "Chatbot":
-    st.title("🤖 EduAI — RAG Chat")
+    st.title("🤖 ShikshaMitra Chatbot (RAG-Enhanced)")
 
     for msg in st.session_state.chat_history:
         with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
+            st.markdown(msg["content"], unsafe_allow_html=True)
 
-    user_input = st.chat_input("Ask your question...")
-    if user_input:
-        st.session_state.chat_history.append({"role": "user", "content": user_input})
-        st.session_state.lc_messages.append(HumanMessage(content=user_input))
-
+    prompt = st.chat_input("Ask about REAP counselling...")
+    if prompt:
+        st.session_state.chat_history.append({"role": "user", "content": prompt})
+        st.session_state.lc_messages.append(HumanMessage(content=prompt))
         with st.chat_message("user"):
-            st.markdown(user_input)
+            st.markdown(prompt)
 
         with st.chat_message("assistant"):
-            with st.spinner("Thinking..."):
+            with st.spinner("Fetching info..."):
                 answer = generate_answer_with_rag(st.session_state.lc_messages)
-            st.markdown(answer)
-
+            st.markdown(answer, unsafe_allow_html=True)
         st.session_state.chat_history.append({"role": "assistant", "content": answer})
         st.session_state.lc_messages.append(AIMessage(content=answer))
 
 elif page == "FAQs":
-    st.title("❓ FAQs - EduAI")
-    st.markdown("Common queries and REAP-related FAQs here...")
+    st.title("❓ FAQs - ShikshaMitra")
+    st.markdown("*(Same content as before — REAP-related FAQs.)*")
 
 elif page == "Submit Issue":
     st.title("🛠️ Submit an Issue")
     name = st.text_input("Name")
     email = st.text_input("Email")
+    mobile = st.text_input("Mobile")
     issue = st.text_area("Describe your issue")
 
     if st.button("Submit"):
         if not (name and email and issue):
-            st.error("Please fill all fields.")
+            st.error("Name, Email, and Issue are required.")
         else:
-            issues_collection().insert_one({"name": name, "email": email, "issue": issue})
+            issues_collection().insert_one({"name": name, "email": email, "mobile": mobile, "issue": issue})
             try:
-                send_mail(email, "Issue Submitted", f"Hello {name}, we received your issue:\n\n{issue}")
-                st.success("Issue submitted successfully.")
+                body = f"Hello {name},\n\nThank you for submitting your issue.\n\nYour Issue: {issue}\n\nBest,\nShikshaMitra Support Team"
+                send_mail(email, "Issue Submission Confirmation", body)
+                st.success("Issue submitted. Confirmation email sent.")
             except Exception as e:
                 st.warning(f"Issue saved, but email failed: {e}")
 
