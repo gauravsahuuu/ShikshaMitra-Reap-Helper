@@ -20,7 +20,7 @@ from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 # ----------------------------
 st.set_page_config(page_title="ShikshaMitra", page_icon="🎓", layout="wide")
 
-# MongoDB (from secrets.toml)
+# MongoDB
 MONGO_URI = st.secrets["mongo"]["connection_string"]
 DB_NAME = st.secrets["mongo"]["database"]
 USERS_COLL = st.secrets["mongo"]["collection"]
@@ -47,7 +47,7 @@ EMBEDDINGS_MODEL = "all-MiniLM-L6-v2"
 
 # System prompt for RAG
 SYSTEM_PROMPT = """You are ShikshaMitra — a helpful REAP admission counselling assistant.
-You use retrieved context from the LearnPal database to answer REAP-related queries clearly and concisely.
+Use retrieved context from the LearnPal database to answer REAP-related queries clearly and concisely.
 If information is missing, say so and suggest raising a ticket.
 Cite sources as (source: <filename>:<page>) when possible.
 """
@@ -93,7 +93,7 @@ def send_mail(to_email, subject, body):
         server.sendmail(MAIL_SENDER, [to_email], msg.as_string())
 
 # ----------------------------
-# RAG Chatbot (Chroma + LangChain)
+# RAG Chatbot (Updated Logic)
 # ----------------------------
 @st.cache_resource
 def get_chroma_client():
@@ -105,11 +105,23 @@ def get_chroma_client():
 
 @st.cache_resource
 def get_collection():
-    return get_chroma_client().get_or_create_collection(name=COLLECTION_NAME)
+    client = get_chroma_client()
+    return client.get_or_create_collection(name=COLLECTION_NAME)
 
 @st.cache_resource
 def get_embeddings():
     return HuggingFaceEmbeddings(model_name=EMBEDDINGS_MODEL)
+
+@st.cache_resource
+def get_vectorstore_and_retriever():
+    client = get_chroma_client()
+    vectorstore = Chroma(
+        client=client,
+        collection_name=COLLECTION_NAME,
+        embedding_function=get_embeddings(),
+    )
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
+    return vectorstore, retriever
 
 @st.cache_resource
 def get_llm():
@@ -138,15 +150,17 @@ def build_context_from_chroma(query: str) -> str:
         st.warning(f"[RAG] Chroma query failed: {e}")
         return ""
 
+    parts = []
     docs = result.get("documents", [[]])[0]
     metas = result.get("metadatas", [[]])[0]
-    parts = []
+
     for i, doc in enumerate(docs):
         meta = metas[i] if i < len(metas) else {}
         src = meta.get("source", "unknown")
         page = meta.get("page", "NA")
         snippet = str(doc).replace("\n", " ").strip()[:1000]
         parts.append(f"[source: {src}:{page}] {snippet}")
+
     ctx = "\n\n".join(parts)
     return ctx[:3500] + " ...[truncated]" if len(ctx) > 3500 else ctx
 
@@ -154,15 +168,11 @@ def generate_answer_with_rag(messages):
     llm = get_llm()
     last_user = next((m.content for m in reversed(messages) if isinstance(m, HumanMessage)), "")
     context = build_context_from_chroma(last_user or "")
-
-    # ✅ FIX: ChatPromptTemplate has no `.invoke()`, must use `.format_messages()`
-    filled_prompt = prompt.format_messages(messages=messages, context=context)
-
+    filled_prompt = prompt.invoke({"messages": messages, "context": context})
     try:
         resp = llm.invoke(filled_prompt)
     except Exception as e:
-        return f"LLM error: {e}"
-
+        return f"Error calling LLM: {e}"
     return getattr(resp, "content", str(resp))
 
 # ----------------------------
@@ -196,7 +206,6 @@ if page == "Login":
     tab_login, tab_register = st.tabs(["Login", "Register"])
 
     with tab_login:
-        st.subheader("Login")
         username = st.text_input("Username", key="login_user")
         password = st.text_input("Password", type="password", key="login_pass")
         if st.button("Login"):
@@ -263,19 +272,21 @@ elif page == "Chatbot":
 
     for msg in st.session_state.chat_history:
         with st.chat_message(msg["role"]):
-            st.markdown(msg["content"], unsafe_allow_html=True)
+            st.markdown(msg["content"])
 
-    prompt = st.chat_input("Ask about REAP counselling...")
-    if prompt:
-        st.session_state.chat_history.append({"role": "user", "content": prompt})
-        st.session_state.lc_messages.append(HumanMessage(content=prompt))
+    user_input = st.chat_input("Ask about REAP counselling...")
+    if user_input:
+        st.session_state.chat_history.append({"role": "user", "content": user_input})
+        st.session_state.lc_messages.append(HumanMessage(content=user_input))
+
         with st.chat_message("user"):
-            st.markdown(prompt)
+            st.markdown(user_input)
 
         with st.chat_message("assistant"):
             with st.spinner("Fetching info..."):
                 answer = generate_answer_with_rag(st.session_state.lc_messages)
-            st.markdown(answer, unsafe_allow_html=True)
+            st.markdown(answer)
+
         st.session_state.chat_history.append({"role": "assistant", "content": answer})
         st.session_state.lc_messages.append(AIMessage(content=answer))
 
@@ -309,4 +320,3 @@ elif page == "Logout":
         st.session_state.username = None
         st.success("You have been logged out")
         st.rerun()
-
