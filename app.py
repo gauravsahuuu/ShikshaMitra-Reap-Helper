@@ -7,12 +7,11 @@ import smtplib
 from email.mime.text import MIMEText
 import re
 import chromadb
+from google import genai
 
 # LangChain / embeddings / llm
 from langchain_chroma import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_openai import ChatOpenAI
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 # ----------------------------
@@ -38,9 +37,9 @@ CHROMA_TENANT = st.secrets["chroma"]["tenant_id"]
 CHROMA_DATABASE = st.secrets["chroma"]["database_id"]
 COLLECTION_NAME = st.secrets["chroma"]["collection_id"]
 
-# OpenRouter (LLM)
-OPENROUTER_API_KEY = st.secrets["openai"]["api_key"]
-OPENROUTER_BASE_URL = st.secrets["openai"]["base_url"]
+# Google Gemini API
+GEMINI_API_KEY = st.secrets["gemini"]["api_key"]
+GEMINI_MODEL = "gemini-3.5-flash"
 
 # Embeddings model
 EMBEDDINGS_MODEL = "all-MiniLM-L6-v2"
@@ -124,19 +123,8 @@ def get_vectorstore_and_retriever():
     return vectorstore, retriever
 
 @st.cache_resource
-def get_llm():
-    return ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0.2,
-        api_key=OPENROUTER_API_KEY,
-        base_url=OPENROUTER_BASE_URL,
-    )
-
-prompt = ChatPromptTemplate.from_messages([
-    ("system", SYSTEM_PROMPT),
-    MessagesPlaceholder("messages"),
-    ("system", "Retrieved context:\n{context}"),
-])
+def get_gemini_client():
+    return genai.Client(api_key=GEMINI_API_KEY)
 
 def build_context_from_chroma(query: str) -> str:
     collection = get_collection()
@@ -164,16 +152,17 @@ def build_context_from_chroma(query: str) -> str:
     ctx = "\n\n".join(parts)
     return ctx[:3500] + " ...[truncated]" if len(ctx) > 3500 else ctx
 
-def generate_answer_with_rag(messages):
-    llm = get_llm()
-    last_user = next((m.content for m in reversed(messages) if isinstance(m, HumanMessage)), "")
-    context = build_context_from_chroma(last_user or "")
-    filled_prompt = prompt.invoke({"messages": messages, "context": context})
+def generate_answer_with_gemini(user_query: str) -> str:
+    """Generate answer using Google Gemini API with basic query."""
     try:
-        resp = llm.invoke(filled_prompt)
+        client = get_gemini_client()
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=f"{SYSTEM_PROMPT}\n\nUser Query: {user_query}",
+        )
+        return response.text
     except Exception as e:
-        return f"Error calling LLM: {e}"
-    return getattr(resp, "content", str(resp))
+        return f"Error calling Gemini API: {e}"
 
 # ----------------------------
 # Session State
@@ -283,8 +272,8 @@ elif page == "Chatbot":
             st.markdown(user_input)
 
         with st.chat_message("assistant"):
-            with st.spinner("Fetching info..."):
-                answer = generate_answer_with_rag(st.session_state.lc_messages)
+            with st.spinner("Generating response..."):
+                answer = generate_answer_with_gemini(user_input)
             st.markdown(answer)
 
         st.session_state.chat_history.append({"role": "assistant", "content": answer})

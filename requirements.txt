@@ -15,14 +15,13 @@ chromadb>=0.5.3
 langchain-core>=0.2.0
 langchain-community>=0.2.0
 langchain-chroma>=0.1.0
-langchain-openai>=0.1.0
 
 # --- Embeddings ---
 sentence-transformers>=2.2.2
 huggingface-hub>=0.22.0
 
 # --- LLM / API Clients ---
-openai>=1.40.0
+google-genai>=0.3.0
 
 # --- Utilities ---
 requests>=2.32.0
